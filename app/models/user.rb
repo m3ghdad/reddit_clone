@@ -21,6 +21,11 @@ class User < ApplicationRecord
 
   before_validation :ensure_session_token
 
+  has_many :subs,
+    primary_key: :id,
+    foreign_key: :modetator_id,
+    class_name: 'Sub'
+
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
     return nil if user.nil?
