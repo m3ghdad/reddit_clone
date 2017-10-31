@@ -1,14 +1,15 @@
 <h1>Welcome Back</h1>
 
 <form class="" action=" <%= session_url %>  " method="post">
+
   <input type="hidden" name="authenticity_token" value=" <% form_authenticity_token %> ">
 
-  <label for="user-username">Username</label>
-  <input type="text" name="user[username]">
+  <label for="old-user-username">Username</label>
+  <input id="old-user-username"type="text" name="user[username]">
 
-  <label for="user-password">Password</label>
-  <input id="user-password"type="password" name="user[password]" value="">
+  <label for="old-user-password">Password</label>
+  <input id="old-user-password"type="password" name="user[password]" value="">
 
-  <input type="submit" value="Submit">
+  <input type="submit">
 
 </form>
