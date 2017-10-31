@@ -23,3 +23,4 @@ class Sub < ApplicationRecord
     foreign_key: :sub_id,
     class_name: 'Post'
 end
+ 

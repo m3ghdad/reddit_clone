@@ -1,6 +1,3 @@
-<h1> <%= @sub.name %> </h1>
+<h1> <%= @sub.title %> </h1>
 <p>Description</p>
 <p> <%= @sub.description %> </p>
-
-
-<%= link_to "Edit", edit_sub_url(@sub) if @sub.modetator == current_user %>
