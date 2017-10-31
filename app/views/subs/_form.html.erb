@@ -8,14 +8,17 @@
   value=" <%= form_authenticity_token %> ">
 
 
-  <input type="hidden" name="_method" value=" <%= call_method %> ">
+  <input 
+  type="hidden"
+  name="_method"
+  value=" <%= call_method %> ">
 
   <label for="sub-title">Title</label>
-  <input id="sub-title" type="text" name="sub[title]" value="">
+  <input id="sub-title" type="text" name="sub[title]" value=" <%= sub.title %> ">
 
   <label for="sub-description">Description</label>
 
-  <textarea name="sub[description]" id="sub-description"></textarea>
+  <textarea name="sub[description]" id="sub-description"><%=sub.description%> </textarea>
 
   <input type="submit" value="Submit">
 

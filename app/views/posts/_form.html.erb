@@ -1,0 +1,39 @@
+<% action_url = post.persisted? ? post_url(post) : posts_url %>
+<% call_method = post.persisted? ? "PATCH" : "POST" %>
+
+<form
+class=""
+action="<%= action_url %>"
+method="POST">
+
+  <input
+  type="hidden"
+  name="authenticity_token"
+  value="<%= form_authenticity_token %>">
+
+  <input
+  type="hidden"
+  name="_method"
+  value=" <%= call_method %> ">
+
+  <label for="post-title">Title</label>
+  <input
+  id="pos-title"
+  type="text"
+  name="post[title]"
+  value=" <%= post.title %> ">
+
+  <label for="post-url">URL</label>
+  <input
+  id="post-url"
+  type="text"
+  name="post[url]"
+  value=" <%= post.url %> ">
+
+  <label for="post-content">Content</label>
+  <textarea id="post-content" name="post[content]"> <%= post.content %> </textarea>
+
+  <input type="submit" value="Submit">
+
+
+</form>
