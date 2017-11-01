@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :url, :content, :user_id, sub_ids: [])
+    params.require(:post).permit(:title, :url, :content)
   end
 
   def require_correct_owner!
