@@ -16,11 +16,12 @@ class Sub < ApplicationRecord
   belongs_to :moderator,
     primary_key: :id,
     foreign_key: :modetator_id,
-    class_name: 'User'
+    class_name: 'User',
+    inverse_of: :subs
 
-  has_many :posts,
-    primary_key: :id,
-    foreign_key: :sub_id,
-    class_name: 'Post'
+  # posts and subs are connected through a seperate joined table
+  # has_many :posts,
+  #   primary_key: :id,
+  #   foreign_key: :sub_id,
+  #   class_name: 'Post'
 end
- 
